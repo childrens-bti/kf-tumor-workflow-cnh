@@ -3,7 +3,7 @@ When it comes to somatic variant calling, having a matched normal sample from th
 However, this is not always possible.
 Mutect2, in our opinion as of this writing, is the best caller to use when a matched normal is not available in tumor-only calling mode.
 Using the same gold standard dataset that we used to benchmark (see the first two sections of [this doc](https://github.com/kids-first/kf-somatic-workflow/blob/master/docs/SOMATIC_SNV_BENCHMARK.md)) our somatic with matched tumor-normal variant calling methods, we reviewed filtering strategies from other publications ([TOSCA](https://academic.oup.com/bioinformaticsadvances/article/2/1/vbac070/6717791?login=false) and [HIVE Dragen Pipeline](https://www.fda.gov/science-research/fda-science-forum/hive-dragen-pipeline-enables-somatic-tumor-only-filtration)), and chose the best combination that maximized F1 score while minimizing true positive (TP) loss as aggressively pursuing false positive (FP) reduction and results in a massive loss of TP calls.
-Our resultant filtering strategy can be found [here](https://github.com/kids-first/kf-tumor-workflow?tab=readme-ov-file#kids-first-drc-tumor-only-pipeline) with benchmark results below.
+Our resultant filtering strategy can be found [here](https://github.com/childrens-bti/kf-tumor-workflow-cnh?tab=readme-ov-file#childrens-national-fork-of-kids-first-drc-tumor-only-pipeline) with benchmark results below.
 
 ## Initial Assessment
 Using the same gold standard dataset for somatic, we compared the tumor-only calls.
