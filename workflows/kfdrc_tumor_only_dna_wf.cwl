@@ -28,13 +28,6 @@ doc: |
   It can also be used to process PDX data by first pre-processing reads using the
   Xenome tool, explained more here in documentation.
 
-  <p align="center">
-    <img src="docs/kids_first_logo.svg" alt="Kids First repository logo" width="660px" />
-  </p>
-  <p align="center">
-    <a href="https://github.com/childrens-bti/kf-tumor-workflow-cnh/blob/main/LICENSE"><img src="https://img.shields.io/github/license/childrens-bti/kf-tumor-workflow-cnh.svg?style=for-the-badge"></a>
-  </p>
-
   ## Import info on cloning the git repo
   This repository takes advantage of the git submodule feature.
   The Single Nucleotide Variant annotation workflow is maintained in our [Annotation Tools Repository](https://github.com/kids-first/kf-annotation-tools).
