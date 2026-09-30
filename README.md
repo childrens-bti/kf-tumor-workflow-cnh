@@ -1,4 +1,4 @@
-# Kids First DRC Tumor Only Pipeline
+# Children's National Fork of Kids First DRC Tumor Only Pipeline
 
 This repository contains tools and workflows for processing of tumor-only
 samples. The Kids First DRC recommends running the tumor only pipeline ONLY
@@ -23,13 +23,6 @@ Mutect2 [in our docs](./docs/MUTECT2_TUMOR_ONLY_FILTERING.md). In short we recom
 Benchmarking results of SNV calling used to inform our filtering criteria can be found in [this README](docs/TUMOR_ONLY_SNV_BENCH_RESULTS.md)
 It can also be used to process PDX data by first pre-processing reads using the
 Xenome tool, explained more here in documentation.
-
-<p align="center">
-  <img src="docs/kids_first_logo.svg" alt="Kids First repository logo" width="660px" />
-</p>
-<p align="center">
-  <a href="https://github.com/kids-first/kf-tumor-workflow/blob/main/LICENSE"><img src="https://img.shields.io/github/license/kids-first/kf-tumor-workflow.svg?style=for-the-badge"></a>
-</p>
 
 ## Import info on cloning the git repo
 This repository takes advantage of the git submodule feature.

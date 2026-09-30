@@ -32,7 +32,7 @@ doc: |
     <img src="docs/kids_first_logo.svg" alt="Kids First repository logo" width="660px" />
   </p>
   <p align="center">
-    <a href="https://github.com/kids-first/kf-tumor-workflow/blob/main/LICENSE"><img src="https://img.shields.io/github/license/kids-first/kf-tumor-workflow.svg?style=for-the-badge"></a>
+    <a href="https://github.com/childrens-bti/kf-tumor-workflow-cnh/blob/main/LICENSE"><img src="https://img.shields.io/github/license/childrens-bti/kf-tumor-workflow-cnh.svg?style=for-the-badge"></a>
   </p>
 
   ## Import info on cloning the git repo
@@ -475,5 +475,5 @@ hints:
 - VCF
 
 "sbg:links":
-- id: 'https://github.com/kids-first/kf-tumor-workflow/tree/v1.0.2'
+- id: 'https://github.com/childrens-bti/kf-tumor-workflow-cnh/tree/v1.0.0'
   label: github-release
