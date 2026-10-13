@@ -12,7 +12,7 @@ When comparing the SNV outputs of this workflow to those of the somatic workflow
 we have found the outputs to be considerably more noisy. To cut down on this
 noise, we have included some recommended inputs, parameters, and filters for
 Mutect2 [in our docs](./docs/MUTECT2_TUMOR_ONLY_FILTERING.md). In short we recommend:
-- Restrict the callable regions with a blacklist and Panel of Normals (PON)
+- Use a Panel of Normals (PON); for WGS, also restrict the callable regions with a blacklist
 - Remove low support reads:
    - Allele Depth (AD) == 0: WGS uninformative reads
    - Variant Allele Frequency (VAF) < 1%: WXS noise
@@ -46,6 +46,9 @@ The wrapper workflow that runs most of the tools is [found here](./workflows/kfd
 
 ## Inputs
 Most inputs have recommended values that should auto import both files and parameters
+
+Blacklist inputs are optional and are not automatically populated. For WGS, provide the recommended files listed below; for WXS or panel sequencing, leave both `blacklist_regions` and `cnv_blacklist_regions` unset.
+
 ### Recommended file/param defaults:
  - `indexed_reference_fasta`: FAI and DICT indexed Homo_sapiens_assembly38.fasta
  - `mutect2_af_only_gnomad_vcf`: af-only-gnomad.hg38.vcf.gz
@@ -67,10 +70,10 @@ Most inputs have recommended values that should auto import both files and param
     - For WXS: Unpadded experimental bait capture regions
  - `blacklist_regions`:
     - For WGS: hg38-blacklist.v2.bed.gz
-    - For WXS: none
+    - For WXS or panel sequencing: leave unset
  - `cnv_blacklist_regions`:
     - For WGS: somatic-hg38_CNV_and_centromere_blacklist.hg38liftover.bed
-    - For WXS: none
+    - For WXS or panel sequencing: leave unset
  - `i_flag`: for CNV calling, whether to intersect b allele file. Set to `N` skip
  - `cfree_sex`: for CNV calling, set to XX for female, XY for male
  - `cfree_ploidy`: Array of ploidy possibilities for ControlFREEC to try. Recommend [2,3,4]
