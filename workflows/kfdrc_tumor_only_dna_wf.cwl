@@ -471,5 +471,5 @@ hints:
 - VCF
 
 "sbg:links":
-- id: 'https://github.com/childrens-bti/kf-tumor-workflow-cnh/tree/v1.0.0'
+- id: 'https://github.com/childrens-bti/kf-tumor-workflow-cnh/tree/v1.1.0'
   label: github-release
