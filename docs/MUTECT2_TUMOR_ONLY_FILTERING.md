@@ -50,7 +50,7 @@ Variants were considered a match if they matched all: chromosome, position, refe
 
 Tumor-only calling with Mutect2 is inherently very noisy. Therefore, most of our recommendations revolve around reducing
 the noise where possible. These recommendations are:
-- Restrict the callable regions with a blacklist and GDC Panel of Normals (PON)
+- Use a GDC Panel of Normals (PON); for WGS, also restrict the callable regions with a blacklist
 - Remove low support reads:
    - Allele Depth (AD) == 0: WGS uninformative reads
    - Variant Allele Frequency (VAF) < 1%: WXS noise
@@ -74,13 +74,16 @@ Any panel is better than no panel for tumor-only.
 
 #### Blacklist
 
-Recommendation: Use GENCODE Blacklist
+Recommendation: For WGS, use Boyle-Lab's `hg38-blacklist.v2.bed.gz` as `blacklist_regions`. For WXS or panel sequencing, leave both `blacklist_regions` and `cnv_blacklist_regions` unset.
 
 Another good way to cut down on noise is to restrict calling in difficult-to-map and repetitive regions. These regions
-tend to produce a lot of calls for short reads technology. In our investigation, we looked at the effect of providing a
+tend to produce a lot of calls for short reads technology. In our WGS investigation, we looked at the effect of providing a
 blacklist to Mutect2. The blacklist we used was sourced from here: https://github.com/Boyle-Lab/Blacklist/blob/master/lists/hg38-blacklist.v2.bed.gz
-In all cases, providing the blacklist resulting in an increase in precision with almost no cost to sensitivity. As such,
-we recommend removing difficult to call regions from your input intervals.
+In the WGS benchmarks, providing the blacklist resulted in an increase in precision with almost no cost to sensitivity. As such,
+we recommend removing difficult to call regions from your WGS input intervals.
+
+Blacklist inputs are optional and are not automatically populated. For WGS CNV calling, also provide
+`somatic-hg38_CNV_and_centromere_blacklist.hg38liftover.bed` as `cnv_blacklist_regions`; this is a separate recommendation from the Mutect2 benchmarks above.
 
 ### Remove Low Support Variants
 
