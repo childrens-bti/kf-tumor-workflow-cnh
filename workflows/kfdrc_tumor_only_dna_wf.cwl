@@ -73,10 +73,10 @@ doc: |
       - For WGS: wgs_canonical_calling_regions.hg38.bed
       - For WXS: Unpadded experimental bait capture regions
    - `blacklist_regions`:
-      - For WGS: hg38-blacklist.v2.bed.gz
+      - For WGS: hg38-blacklist.v2.bed.gz (can be found at https://cavatica.sbgenomics.com/u/kfdrc-harmonization/kf-reference-pipeline/files-premium?search=hg38-blacklist.v2.bed.gz)
       - For WXS or panel sequencing: leave unset
    - `cnv_blacklist_regions`:
-      - For WGS: somatic-hg38_CNV_and_centromere_blacklist.hg38liftover.bed
+      - For WGS: somatic-hg38_CNV_and_centromere_blacklist.hg38liftover.bed (Can be found at https://cavatica.sbgenomics.com/u/kfdrc-harmonization/kf-reference-pipeline/files-premium?search=somatic-hg38_CNV_and_centromere_blacklist.hg38liftover.bed)
       - For WXS or panel sequencing: leave unset
    - `i_flag`: for CNV calling, whether to intersect b allele file. Set to `N` skip
    - `cfree_sex`: for CNV calling, set to XX for female, XY for male
